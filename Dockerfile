@@ -103,7 +103,9 @@ RUN chmod 755 /usr/local/share/jupyter/kernels/python3_8/python3-8-kernel.sh
 
 # setting libcuda.so so that it can point to NVIDIA drivers and fix ptxjitcompiler not found issue
 RUN cp /usr/local/cuda-11.0/compat/libcuda.so.1 /usr/lib/x86_64-linux-gnu && \
-cp /usr/local/cuda-11.0/compat/libcuda.so.450.119.04 /usr/lib/x86_64-linux-gnu# 2. python 3.7 kernel
+cp /usr/local/cuda-11.0/compat/libcuda.so.450.119.04 /usr/lib/x86_64-linux-gnu
+
+# 2. python 3.7 kernel
 USER root
 ENV PYTHON_3_7_ENV python3_7
 RUN conda install -c anaconda python=3.7.7 && \
