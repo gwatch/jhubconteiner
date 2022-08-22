@@ -96,7 +96,6 @@ CMD ["jupyterhub"]
 
 
 # copying kernel config files
-RUN echo(`pwd`)
 COPY ./config/python3-8-kernel-config.json /usr/local/share/jupyter/kernels/python3_8/kernel.json
 COPY ./config/python3–8-kernel.sh /usr/local/share/jupyter/kernels/python3_8/python3-8-kernel.sh
 RUN chmod 755 /usr/local/share/jupyter/kernels/python3_8/python3-8-kernel.sh
